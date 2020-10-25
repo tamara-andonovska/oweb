@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset = "utf-8">
+<title>Tamara Andonovska</title>
+
+<style type = "text/css">
+
+* {background-color: #111;
+color: white;
+font-family: Times New Roman, sans-serif;
+}
+
+.sidebar{
+height: 100%;
+z-index: 1;
+width: 150px;
+background-color:#111;
+top: 0;
+left: 0;
+position: fixed;
+}
+
+.sidebar a{
+display: block;
+color: #818181;
+padding: 6px 8px 6px 16px;
+text-decoration: none;
+text-align: center;
+}
+
+.sidebar a:hover{
+color: lightpink;
+}
+
+.main{
+margin-left: 150px;
+}
+
+.dropbtn{
+background-color: hotpink;
+color: white;
+border: none;
+cursor: pointer;
+text-align: center;
+z-index: 1;
+}
+
+.dropdown{
+position: relative;
+right: 0;
+}
+
+.dropdown-content{
+display: none;
+position: absolute;
+background-color: hotpink;
+}
+
+.dropdown-content a{
+color: lightgreen;
+display: block;
+}
+
+.dropdow-content a:hover{
+color: darkgreen;
+}
+
+.dropdown:hover .dropdown-content{
+display: block;
+position: absolute;
+top: 0;
+left: 100%;
+}
+
+.dropdown:hover .dropbtn{
+background-color: darkgreen;
+}
+
+.footer{
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: none;
+color: white;
+text-align: center;
+}
+
+p {text-align: justify;
+}
+
+h1, h2, h3, h4, g5, h6{
+background-color: grey;
+float: center;
+text-align: center;
+width: 40%;
+color: white;
+font-size: 20px;
+}
+
+body, input, select, label, textarea{
+color: white;
+position: relative;
+}
+
+.slika { transition: transform .15s;
+width: 400px;
+height: 400px;
+min-width:100px;
+min-height:100px;
+position: relative;
+}
+
+.slika:hover { 
+z-index: 1;
+-ms-transform: scale(1.2);
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+
+.spec{
+text-align: center;
+}
+
+.vrska:link{
+color: lightgreen;
+text-decoration: none;
+}
+
+.vrska:visited{
+color: #FFB6C1;
+text-decoration: none;
+}
+
+.vrska:hover{
+color: #228B22;
+text-decoration: underline;
+}
+
+.boja {
+color: green;
+}
+
+time{
+color: #DA70D6;
+}
+
+.podtocki{
+font-size: 18px;
+font-weight: bold;
+font-style: italic;
+}
+
+.dr{
+font-weight: bold;
+font-style: italic;
+font-size: 14px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class = "sidebar">
+<a href = "#about">About me</a>
+<div class = "dropdown">
+<a class = "dropdown-btn" href = "#fave">Favorite things</a>
+<div class = "dropdown-content">
+<a href = "#music">Music</a>
+<a href = "#food">Food</a>
+<a href = "#movies">Movies</a>
+</div>
+</div>
+
+<a href = "#gallery">Gallery</a>
+<a href = "#blog">Blog</a>
+<a href = "#form">Tell me about you!</a>
+<a href = "#contact">Contact</a>
+</div>
+
+<div class = "main">
+
+<h3 id = "about">About me</h3>
+<p class = "spec">this is filler text cause i literally have zero clue what to tell ya about me.</p>
+<p class = "spec"><img src = "cato.jpg" height = "338" width = "400"alt = "slika od mache"></p>
+<p>
+<ul>
+<li>uceniche</li>
+<li>annoying lil person</li>
+<li>ponekad znam da vozam tocak</li>
+</ul>
+</p>
+
+<h3 id = "fave">Favorite things</h3>
+<p>
+<ul>
+<li class = "podtocki" id = "music"><strong>Dig into my music preferences: </strong><a href = " "></a></li>
+<ul class = "dr">
+<li class = "boja"><a class = "vrska" href = "https://open.spotify.com/playlist/37i9dQZF1DWYBO1MoTDhZI?si=OGzeX4CxSVGZlRf4cOirYQ&fbclid=IwAR0Esm_YIwPFOImkI9shgIwAXfYAfZXhKiViaLjDuG7qyIYra2JrdZMkpJI">Good Vibes</a></li>
+<li class = "boja"><a class = "vrska" href = "https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0?si=3rDUkBpvQsKDzrLhQhLNgw&fbclid=IwAR19LC10_6Yegu8VCBywgkdzy3UDAHRuzSrfg_fJkovQ8z0DuKrOWV6u5C4">Mood Booster</a></li>
+<li class = "boja"><a class = "vrska" href = "https://open.spotify.com/playlist/37i9dQZF1DX4dyzvuaRJ0n?si=XOTtnYPiSHGKd0fYtp3UgA&fbclid=IwAR09J2RbwWjgyCvERRPX7lucfAALnsh0mGmiUag7HmvnmFHyITJMAv5VK3w">mint</a></li>
+<li class = "boja"><a class = "vrska" href = "https://open.spotify.com/playlist/37i9dQZF1DWZqyWCBK6QTt?si=um56DFo0TD642hxPaGplgg&fbclid=IwAR09J2RbwWjgyCvERRPX7lucfAALnsh0mGmiUag7HmvnmFHyITJMAv5VK3w">Spotify Singers: Covers</a></li>
+</ul>
+<li class = "podtocki" id = "food">y u m m y
+<div>
+<a href = "https://www.facebook.com/waltersbakingbread/"><img src = "burger.jpg" height = "300" width = "300" alt = "burger"></a>
+<a href = "https://www.facebook.com/meltysubs/"><img src = "wrap.jpg" height = "300" width = "300" alt = "wrap"></a>
+<a href = "http://plazadetoros.mk/"><img src = " pasta.jpg" height = "300" width = "300" alt = "pasta"></a>
+<a href = "https://www.enriko.mk/"><img src = "pizza.jpg" height = "300" width = "300" alt = "pizza"></a>
+</div>
+</li>
+<li style ="font-size:18px" id = "movies"><strong><em>My top 5 movies</em></strong>
+<ol>
+<li><a class = "vrska" href = "https://www.imdb.com/title/tt1375666/"><strong><em>Inception (2010)</em></strong></a></li>
+<li><a class = "vrska" href = "https://www.imdb.com/title/tt0816692/"><strong><em>Interstellar (2014)</em></strong></a></li>
+<li><a class = "vrska" href = "https://www.imdb.com/title/tt1045658/"><strong><em>Silver Linings Playbook (2012)</em></strong></a></li>
+<li><a class = "vrska" href = "https://www.imdb.com/title/tt0147800/"><strong><em>10 Things I Hate About You (1999)</em></strong></a></li>
+<li><a class = "vrska" href = "https://www.imdb.com/title/tt0480249/"><strong><em>I Am Legend (2007)</em></a></strong></li>
+</ol>
+</li>
+</p>
+
+<h3 id = "gallery">Gallery</h3>
+<div>
+<img class = "slika" src = "eden.jpg" alt = "slika1">
+<img class = "slika" src = "dva.jpg" alt = "slika2">
+<img class = "slika" src = "tri.jpg" alt = "slika3">
+</div>
+<div>
+<img class = "slika" src = "cetiri.jpg" alt = "slika4">
+<img class = "slika" src = "pet.jpg" alt = "slika5">
+<img class = "slika" src = "sest.jpg" alt = "slika6">
+</div>
+
+<h3 id = "blog">Blog</h3>
+
+<section>
+<details>
+<summary>A short article</summary>
+<p>This text has been entirely copied from <a class = "vrska" href = "https://en.wikipedia.org/wiki/Blog"> Wikipedia.</a></p>
+<article>
+<p><time>10:00</time></p>
+<p>A blog (a truncation of "weblog") 
+is a discussion or informational website published on the 
+World Wide Web consisting of discrete, often informal diary-style 
+text entries (posts). Posts are typically displayed in reverse chronological order, 
+so that the most recent post appears first, at the top of the web page. Until 2009, 
+blogs were usually the work of a single individual, occasionally of a small group, 
+and often covered a single subject or topic. In the 2010s, "multi-author blogs" (MABs) 
+emerged, featuring the writing of multiple authors and sometimes professionally edited. 
+MABs from newspapers, other media outlets, universities, think tanks, advocacy groups, 
+and similar institutions account for an increasing quantity of blog traffic. 
+The rise of Twitter and other "microblogging" systems helps integrate MABs and 
+single-author blogs into the news media. Blog can also be used as a verb, 
+meaning to maintain or add content to a blog.
+</p>
+</article>
+</section>
+
+<h2 id = "form">Tell me about you!</h2>
+<form method = "post" action = " " autocomplete = "on">
+
+<input type = "hidden" name = "recipient" value = "tami_andonovska@hotmail.com">
+<input type = "hidden" name = "subject" value = "Info Form">
+<input type = "hidden" name = "redirect" value = "main.html">
+
+<p><label>First Name:
+<input type = "text" id = "ime" placeholder = "First Name" required/>
+</label></p>
+
+<p><label>Last Name:
+<input type = "text" id = "prezime" placeholder = "Last Name" required/>
+</label></p>
+
+<p><label>Date of birth:
+<input type = "date" required/>
+</label></p>
+
+<p><label>E-mail address:
+<input type = "email" placeholder = "name@domain.com" required />
+</label></p>
+
+<p><label>Phone number: 
+<input type = "tel" placeholder = "+389 ## ### ###" pattern = "\d{4} +\d{2} +\d{3} +\d{3}" required />
+</label></p>
+
+<p><label>URL from your personal website:
+<input type = "url" placeholder = "https://www.ime-prezime.com" />
+</label></p>
+
+<p><label>Favorite color:
+<input type = "color" autofocus />
+</label></p>
+
+<p><label>Rate my page:
+<select name = "rating">
+<option selected>idk</option>
+<option>10</option>
+<option>9</option>
+<option>8</option>
+<option>7</option>
+<option>6</option>
+<option>5</option>
+<option>4</option>
+<option>3</option>
+<option>2</option>
+<option>1</option>
+</select>
+</label>
+</p>
+
+<p><label>How do I make it better?<br>
+<textarea name = "comments" rows = "4" cols = "36" placeholder = "Enter comments here."></textarea>
+</label></p>
+
+<p>
+<input type ="submit" value = "Submit" />
+<input type = "reset" value = "Clear" />
+</p>
+
+</form>
+
+<footer id = "contact">
+<p><strong>Contact info: </strong></p>
+<address><a class = "vrska" href = "mailto:t.andonovska8@gmail.com"><em>t.andonovska8@gmail.com</em></a></address>
+<p>Telefon: <em>+389 70 123 123</em></p>
+<p>&copy tamara-andonovska</p>
+
+</footer>
+
+</div>
+
+</body>
+
+</html>
