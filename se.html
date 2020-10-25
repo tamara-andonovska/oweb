@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<!-- sekogash mora da se stavi toa za da se znae deka stanuva zbor -->
+<!-- za html dokument -->
+
+<!-- za da ti go otvori kako html stranica na web browser: -->
+<!-- save as, stavi .html nastavka, all files -->
+
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Welcome</title>
+        <!-- naslovot na tabot -->
+        
+        <meta name = "keywords" content = "tamara, andonovska, html">
+        <meta name = "description" content = "info page/form">
+        <!-- ovie dve pomagaat za search engine da go kategorizira -->
+        <!-- i pokazuva sajtot, pri soodveten search -->
+    </head>
+    
+    <body>
+        <h1>Welcome to HTML5!</h1>
+        <!-- ima headings od h1 - h6, h1 e najgolem, h6 - najmal -->
+        <p>
+            <a href = "#prva">prva</a><br>
+            <a href = "#vtora">vtora</a><br>
+            <a href = "#treta">treta</a><br>
+            <a href = "#cetvrta">chetvrta</a><br>
+        </p>
+        <!-- Koga kje se klikne na soodvetniot link od navedenite -->
+        <!-- kje go odnese korisnikot do soodvetnata godina so predmeti dolu -->
+        
+        <p>Ova e paragraf!</p>
+        <section id = "1">
+<h2>Omileni sajtovi:</h2>
+<p><strong><em>Klikni na imeto na sajtot za da go posetis</em></strong><p>
+
+<!-- strong e za bold, a em e za italic -->
+
+<p><a href = "https://www.facebook.com/">Facebook</a></p>
+<p><a href = "https://www.instagram.com/">Instagram</a></p>
+<p><a href = "https://www.google.com/">Google</a></p>
+
+<!-- so a href moze da se linkuva i mail, odnosno da se otvara default mail -->
+<!-- na nasiot kompjuter, so naznaka to: taa sto e vo a href -->
+
+<p>
+To write to <a href = "mailto:tami_andonovska@hotmail.com">Tamara Andonovska</a>, click on the link
+and your default email client will open a new message and adress it to her.
+</p>
+
+<p>
+
+<img src = "cato.jpg" width = "92" height = "120" alt = "tams">
+<img src = "srce.jpg" width = "92" height = "120" alt = "bejb">
+
+<!-- alt e tekstot sto se pojavuva vo slucaj koga ne moze da se najde slikata -->
+
+</p>
+
+<!-- za da se prikaze slikata mora da e vo istiot folder kade sto e .txt file-ot -->
+<!-- vo slucaj da ne e, se pravi slednovo: -->
+
+<figure>
+
+<!-- figure elementot ja opishuva slikata -->
+
+<img src = "tams/PHOTOS/image-0-02-05-734894378b10fe2dd6fb9fffdde78a3da0e631dd2b58d842b195e0c4470fc08e-V-01-01.jpeg" 
+width = "92" height = "120" alt = "bad bitch">
+
+<!-- .txt file-ot e vo folder Desktop, nie pisuvame otposle se sto se naogja za da ja locirame slikata -->
+<!-- zasto vekje se naogjame vo desktop -->
+
+<figcaption><em>Tamara e basic</em></figcaption>
+
+</figure>
+
+<p>
+Klikni za da otvoris insta profil:<br>
+<a href = "https://www.instagram.com/tamara.a3200/?hl=en">
+<img src = "tams/PHOTOS/IMG_20200125_193745_925.jpg" width = "65" height = "100" alt = "tamara.slika">
+</a>
+
+</p>
+</section>
+
+<section id = "2">
+<h2>Specijalni karakteri:</h2>
+<p>If x &lt; 10 then increment x by 1</p>
+
+<p><del>Ne</del> te sakam.</p>
+<p>10 na kvadrat: 10<sup>2</sup></p>
+<p>Voda: H<sub>2</sub>O</p>
+</section>
+
+<p>Vreme e za tabela!!!</p>
+
+<table border = "1">
+<caption>Tabela1</caption>
+<thead>
+<tr>
+<th rowspan = "2">prva</th>
+<th colspan = "2">vtora</th>
+</tr>
+<tr>
+<th>treta</th>
+<th>4ta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+
+<!-- th se boldirani i centrirani, a td se obicni i left-centred -->
+<!-- th = table header, td = table data cell -->
+
+<p>Popolni go formularot:</p>
+
+<form method = "post" action = " " autocomplete = "on">
+<!-- action samo kje ja otvara stranata sto e stavena, zasto ne rabotime so serverskata strana -->
+<!-- a mora nesto da stavime tamu, toj del mora da go ima (kje se otvara str, koga kje se click submit -->
+<!-- autocomplete on - znachi deka avtomatski prethodnite vnesuvanja kje se prikazhuvaat i kje mozhe -->
+<!-- samo na niv da se klikne = polesen vnes -->
+
+<p><label>Name:
+<input name = "name" type = "text" size = "30">
+</label></p>
+<p><label>Surname:
+<input name = "surname" type = "text" size = "30">
+</label></p>
+<p><label>E-mail address:
+<input name = "email" type = "text" size = "50" placeholder = "name@domain.com" required>
+</label></p>
+
+<!-- eden nachin na zapishuvanje mail -->
+
+<p><label>Confirm e-mail address:
+<input type = "email" placeholder = "name@domain.com" required />
+</label></p>
+<!-- vtor nachin na zapishuvanje mail -->
+
+
+<p><label>Password:
+<input name = "password" type = "password" size = "50">
+</label></p>
+
+<p><label>Date of birth:
+<input type = "date" />
+</label></p>
+
+<p><label>Datum i vreme na ragjanje spored <mark>izvod</mark>:
+<input type = "datetime" />
+</label></p>
+
+<!-- so mark se obelezhuva tekstot kako so zholt marker podvlechen -->
+
+
+<p><label>Lokalen datetime:
+<input type = "datetime-local" />
+</label></p>
+
+<p><label>Comments:<br>
+<textarea name = "comments" rows = "4" cols = "36" placeholder = "Enter comments here."></textarea>
+</label></p>
+
+<!-- br - break, za nov red, kako tab -->
+
+<p>Kako stigna do site-ot?<br>
+<label>search engine
+<input name = "howtosite" type = "radio" value = "search engine" checked>
+</label>
+
+<!-- ako e checked staveno kaj nekoj input, toj kje bide staven kako default-no chekiran -->
+<!-- type radio znaci deka samo edno od ponudenite moze da e chekirano -->
+
+<label>Links from another site
+<input name = "howtosite" type = "radio" value = "link">
+</label> 
+<label>Deitel.com Web site
+<input name = "howtosite" type = "radio" value = "deitel.com">
+</label>
+<label>Reference in a book
+<input name = "howtosite" type = "radio" value = "book">
+</label>
+<label>Other
+<input name = "howtosite" type = "radio" value = "other">
+</label>
+</p>
+
+<p>Raboti sto gi sakam:<br>
+<label>site design
+<input name = "thingsliked" type = "checkbox" value = "design">
+</label>
+<label>photography
+<input name = "thingsliked" type = "checkbox" value = "photography">
+</label>
+<label>books
+<input name = "thingsliked" type = "checkbox" value = "books">
+</label>
+</p>
+
+<!-- type checkbox moze povekje da se chekiraat -->
+<!-- name stoi zaednicko za site sto se opcii i kaj radio i kaj checkbox -->
+<!-- value e toa sto stoi ? -->
+
+<p><label>Rating:
+<select name = "rating">
+<option selected>10</option>
+<option>9</option>
+<option>8</option>
+<option>7</option>
+<option>6</option>
+<option>5</option>
+<option>4</option>
+<option>3</option>
+<option>2</option>
+<option>1</option>
+</select>
+</label>
+</p>
+
+<p><label>Omilena boja:
+<input type = "color" autofocus />
+</label></p>
+
+
+<p><label>Omilen mesec:
+<input type = "month" />
+</label></p>
+
+<p><label>Number:
+<input type = "number" 
+min = "1"
+max = "10"
+step = "1"
+value = "5" />
+</label>Pick a number between 1-10</p>
+
+<p><label>Range: 0
+<input type = "range" min = "0" max ="20" value = "10" />20 
+</label></p>
+
+<p><label>
+<input type = "search" placeholder = "search query" />
+</label>(Enter your search query here.</p>
+
+<p><label>Telefon za kontakt: 
+<input type = "tel" placeholder = "(###) ###-####" pattern = "\(\d{3}\) +\d{3}-\d{4}" required />
+</label></p>
+
+<p><label>Omileno vreme vo denot: 
+<input type = "time" />
+</label></p>
+
+<p><label>URL:
+<input type = "url" placeholder = "www.google.com" />
+</label></p>
+
+<p><label>Kolokviumska nedela: 
+<input type = "week" />
+</label></p>
+
+<p><label>Ime: 
+<input type = "text" id = "firstName" placeholder = "First Name" /> First Name
+</label></p>
+
+<p><label>Prezime: 
+<input type = "text" id = "lastName" placeholder = "Last Name" /> Last Name
+</label></p>
+
+<p><label for = "txtList">Birth Month: 
+<input type = "text" id = "txtList" placeholder = "Select a month" list = "months" />
+<datalist id = "months">
+<option value = "January">
+<option value = "February">
+<option value = "March">
+<option value = "April">
+<option value = "May">
+<option value = "June">
+<option value = "July">
+<option value = "August">
+<option value = "September">
+<option value = "October">
+<option value = "November">
+<option value = "December"> 
+</datalist>
+</label></p>
+
+<input type = "hidden" name = "recipient" value = "tami_andonovska@hotmail.com">
+<input type = "hidden" name = "subject" value = "Info Form">
+<input type = "hidden" name = "redirect" value = "main.html">
+
+<!-- site raboti shto se type hidden se isprakjaat koga kje se stisne submit -->
+<!-- no tie ne se vidlivi za korisnikot -->
+
+
+<p>0<meter min = "0" max = "60" value = "37"></meter>60</p>
+
+<p>
+<input type ="submit" value = "Submit" />
+<input type = "reset" value = "Clear" />
+</p>
+</form>
+
+<ul>
+<li id = "prva">Prva godina</li>
+<ul>
+<li>PIA</li>
+<li>PSP</li>
+<li>OE</li>
+</ul>
+
+<li id = "vtora">Vtora godina</li>
+<ul>
+<li>PIA</li>
+<li>PSP</li>
+<li>OE</li>
+</ul>
+
+<li id = "treta">Treta godina</li>
+<ul>
+<li>PIA</li>
+<li>PSP</li>
+<li>OE</li>
+</ul>
+
+<li id = "cetvrta">Cetvrta godina</li>
+<ul>
+<li>PIA</li>
+<li>PSP</li>
+<li>OE</li>
+</ul>
+
+</ul>
+
+<footer>
+<address>Kontakt na <a href = "mailto:tami_andonovska@hotmail.com">tami_andonovska@hotmail.com</a></address>
+
+</footer>
+
+</body>
+
+</html>
