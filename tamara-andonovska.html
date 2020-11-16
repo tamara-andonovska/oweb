@@ -7,161 +7,8 @@
 <meta charset = "utf-8">
 <title>Tamara Andonovska</title>
 
-<style type = "text/css">
-
-* {background-color: #111;
-font-family: Times New Roman, sans-serif;
-}
-
-.sidebar{
-height: 100%;
-z-index: 1;
-width: 150px;
-background-color:#111;
-top: 0;
-left: 0;
-position: fixed;
-}
-
-.sidebar a{
-display: block;
-color: #818181;
-padding: 6px 8px 6px 16px;
-text-decoration: none;
-text-align: center;
-}
-
-.sidebar a:hover{
-color: lightpink;
-}
-
-.main{
-margin-left: 150px;
-}
-
-.dropbtn{
-background-color: hotpink;
-color: white;
-border: none;
-cursor: pointer;
-text-align: center;
-z-index: 1;
-}
-
-.dropdown{
-position: relative;
-right: 0;
-}
-
-.dropdown-content{
-display: none;
-position: absolute;
-background-color: hotpink;
-}
-
-.dropdown-content a{
-color: lightgreen;
-display: block;
-}
-
-.dropdow-content a:hover{
-color: darkgreen;
-}
-
-.dropdown:hover .dropdown-content{
-display: block;
-position: absolute;
-top: 0;
-left: 100%;
-}
-
-.dropdown:hover .dropbtn{
-background-color: darkgreen;
-}
-
-.footer{
-position: fixed;
-left: 0;
-bottom: 0;
-width: 100%;
-background-color: none;
-color: white;
-text-align: center;
-}
-
-p {text-align: justify;
-}
-
-h1, h2, h3, h4, g5, h6{
-background-color: grey;
-float: center;
-text-align: center;
-width: 40%;
-color: white;
-font-size: 20px;
-}
-
-body, input, select, label, textarea{
-color: white;
-position: relative;
-}
-
-.slika { transition: transform .15s;
-width: 400px;
-height: 400px;
-min-width:100px;
-min-height:100px;
-position: relative;
-}
-
-.slika:hover { 
-z-index: 1;
--ms-transform: scale(1.2);
--webkit-transform: scale(1.2);
-transform: scale(1.2);
-}
-
-.spec{
-text-align: center;
-}
-
-.vrska:link{
-color: lightgreen;
-text-decoration: none;
-}
-
-.vrska:visited{
-color: #FFB6C1;
-text-decoration: none;
-}
-
-.vrska:hover{
-color: #228B22;
-text-decoration: underline;
-}
-
-.boja {
-color: green;
-}
-
-time{
-color: #DA70D6;
-}
-
-.podtocki{
-font-size: 18px;
-font-weight: bold;
-font-style: italic;
-}
-
-.dr{
-font-weight: bold;
-font-style: italic;
-font-size: 15px;
-}
-
-
-</style>
+<link rel = "stylesheet" type = "text/css" href = "styles.css">
+<script src = "dynamics.js"></script>
 
 </head>
 
@@ -231,14 +78,46 @@ font-size: 15px;
 
 <h3 id = "gallery">Gallery</h3>
 <div>
+
+<div>
 <img class = "slika" src = "eden.jpg" alt = "slika1">
-<img class = "slika" src = "dva.jpg" alt = "slika2">
-<img class = "slika" src = "tri.jpg" alt = "slika3">
+<button class = "like" type="button" onClick="like1()"><img src = "instaheart.png" width = "30" height = "30"></button>
+<p>Likes: <a id="likes1">0</a></p>
 </div>
+
+<div>
+<img class = "slika" src = "dva.jpg" alt = "slika2">
+<button class = "like" type="button" onClick="like2()"><img src = "instaheart.png" width = "30" height = "30"></button>
+<p>Likes: <a id="likes2">0</a></p>
+</div>
+
+<div>
+<img class = "slika" src = "tri.jpg" alt = "slika3">
+<button class = "like" type="button" onClick="like3()"><img src = "instaheart.png" width = "30" height = "30"></button>
+<p>Likes: <a id="likes3">0</a></p>
+</div>
+
+</div>
+
+<div>
+
 <div>
 <img class = "slika" src = "cetiri.jpg" alt = "slika4">
+<button class = "like" type="button" onClick="like4()"><img src = "instaheart.png" width = "30" height = "30"></button>
+<p>Likes: <a id="likes4">0</a></p>
+</div>
+
+<div>
 <img class = "slika" src = "pet.jpg" alt = "slika5">
+<button class = "like" type="button" onClick="like5()"><img src = "instaheart.png" width = "30" height = "30"></button>
+<p>Likes: <a id="likes5">0</a></p>
+</div>
+
+<div>
 <img class = "slika" src = "sest.jpg" alt = "slika6">
+<button class = "like" type="button" onClick="like6()"><img src = "instaheart.png" width = "30" height = "30"></button>
+<p>Likes: <a id="likes6">0</a></p>
+</div>
 </div>
 
 <h3 id = "blog">Blog</h3>
