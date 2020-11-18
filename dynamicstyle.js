@@ -48,3 +48,11 @@ document.getElementById("komentar").onclick = function(){
 	var komentarr = prompt("Comment: ");
   document.getElementById("komentarK").innerText = komentarr;
 }
+
+$(function(){
+    $('#home').load("aboutme.html");
+    $('#faves').load("fave");
+    $('blog').load("blog.html");
+    $('#gallerija').load("gallery.html");
+    $('#forma').load("form.html");
+})

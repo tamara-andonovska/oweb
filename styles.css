@@ -1,163 +1,166 @@
 * {background-color: #111;
-    font-family: Times New Roman, sans-serif;
-    }
-    
-    .sidebar{
-    height: 100%;
-    z-index: 1;
-    width: 150px;
-    background-color:#111;
-    top: 0;
-    left: 0;
-    position: fixed;
-    }
-    
-    .sidebar a{
-    display: block;
-    color: #818181;
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    text-align: center;
-    }
-    
-    .sidebar a:hover{
-    color: lightpink;
-    }
-    
-    .main{
-    margin-left: 150px;
-    }
-    
-    .dropbtn{
-    background-color: hotpink;
-    color: white;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    z-index: 1;
-    }
-    
-    .dropdown{
-    position: relative;
-    right: 0;
-    }
-    
-    .dropdown-content{
-    display: none;
-    position: absolute;
-    background-color: hotpink;
-    }
-    
-    .dropdown-content a{
-    color: lightgreen;
-    display: block;
-    }
-    
-    .dropdow-content a:hover{
-    color: darkgreen;
-    }
-    
-    .dropdown:hover .dropdown-content{
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    }
-    
-    .dropdown:hover .dropbtn{
-    background-color: darkgreen;
-    }
-    
-    .footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: none;
-    color: white;
-    text-align: center;
-    }
-    
-    p {text-align: justify;
-    }
-    
-    h1, h2, h3, h4, g5, h6{
-    background-color: grey;
-    float: center;
-    text-align: center;
-    width: 40%;
-    color: white;
-    font-size: 20px;
-    }
-    
-    body, input, select, label, textarea{
-    color: white;
-    position: relative;
-    }
-    
-    .slika { transition: transform .15s;
-    width: 400px;
-    height: 400px;
-    min-width:100px;
-    min-height:100px;
-    position: relative;
-    }
-    
-    .slika:hover { 
-    z-index: 1;
-    -ms-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-    }
-    
-    .spec{
-    text-align: center;
-    }
-    
-    .vrska:link{
-    color: lightgreen;
-    text-decoration: none;
-    }
-    
-    .vrska:visited{
-    color: #FFB6C1;
-    text-decoration: none;
-    }
-    
-    .vrska:hover{
-    color: #228B22;
-    text-decoration: underline;
-    }
-    
-    .boja {
-    color: green;
-    }
-    
-    time{
-    color: #DA70D6;
-    }
-    
-    .podtocki{
-    font-size: 18px;
-    font-weight: bold;
-    font-style: italic;
-    }
-    
-    .dr{
-    font-weight: bold;
-    font-style: italic;
-    font-size: 15px;
-    }
+font-family: Times New Roman, sans-serif;
+}
 
-    .like {
-        width: 30;
-        height: 30;
-        display: block;
-        border: none;
-        outline: none;
-    }
+.sidebar{
+height: 100%;
+z-index: 1;
+width: 150px;
+background-color:#111;
+top: 0;
+left: 0;
+position: fixed;
+}
 
-    button{
-        color: white;
-    }
-    
+.sidebar a{
+display: block;
+color: #818181;
+padding: 6px 8px 6px 16px;
+text-decoration: none;
+text-align: center;
+}
+
+.sidebar a:hover{
+color: lightpink;
+}
+
+.main{
+margin-left: 150px;
+}
+
+.dropbtn{
+background-color: hotpink;
+color: white;
+border: none;
+cursor: pointer;
+text-align: center;
+z-index: 1;
+}
+
+.dropdown{
+position: relative;
+right: 0;
+}
+
+.dropdown-content{
+display: none;
+position: absolute;
+background-color: hotpink;
+}
+
+.dropdown-content a{
+color: lightgreen;
+display: block;
+}
+
+.dropdow-content a:hover{
+color: darkgreen;
+}
+
+.dropdown:hover .dropdown-content{
+display: block;
+position: absolute;
+top: 0;
+left: 100%;
+}
+
+.dropdown:hover .dropbtn{
+background-color: darkgreen;
+}
+
+.footer{
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: none;
+color: white;
+text-align: center;
+}
+
+p {text-align: justify;
+}
+
+h1, h2, h3, h4, g5, h6{
+background-color: grey;
+float: center;
+text-align: center;
+width: 40%;
+color: white;
+font-size: 20px;
+}
+
+body, input, select, label, textarea{
+color: white;
+position: relative;
+}
+
+.slika { transition: transform .15s;
+width: 400px;
+height: 400px;
+min-width:100px;
+min-height:100px;
+position: relative;
+}
+
+.slika:hover { 
+z-index: 1;
+-ms-transform: scale(1.2);
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+
+.spec{
+text-align: center;
+}
+
+.vrska:link{
+color: lightgreen;
+text-decoration: none;
+}
+
+.vrska:visited{
+color: #FFB6C1;
+text-decoration: none;
+}
+
+.vrska:hover{
+color: #228B22;
+text-decoration: underline;
+}
+
+.boja {
+color: green;
+}
+
+time{
+color: #DA70D6;
+}
+
+.podtocki{
+font-size: 18px;
+font-weight: bold;
+font-style: italic;
+}
+
+.dr{
+font-weight: bold;
+font-style: italic;
+font-size: 15px;
+}
+
+button {
+width: 30;
+height: 30;
+display: block;
+border: none;
+outline: none;
+}
+
+table{
+border: none;
+border-collapse: collapse;
+width: 100%;
+overflow-x:auto;
+text-align: center;
+}
