@@ -1,77 +1,162 @@
-* {background-color: #111;
-font-family: Times New Roman, sans-serif;
+* {
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
 }
 
-body{
-    background-image: url("pozadina.jpg");
-    opacity: 0.6;
+.bodyy{
+  background: url("sliki/pozadina.jpg") no-repeat center center fixed;
 }
-s
+
 .sidebar{
-height: 100%;
-z-index: 1;
-width: 150px;
-background-color: #111;
-top: 0;
-left: 0;
-position: fixed;
-}
+  height: 100%;
+  z-index: 1;
+  width: 150px;
+  background-color:#ffada2;
+  top: 0;
+  left: 0;
+  position: fixed;
+  }
 
-.sidebar a{
-display: block;
-color: #818181;
-padding: 6px 8px 6px 16px;
-text-decoration: none;
-text-align: center;
-}
+  .sidebarC{
+    height: 100%;
+    z-index: 1;
+    width: 150px;
+    background-color:#be3927;
+    top: 0;
+    left: 0;
+    position: fixed;
+    }
+  
+  .sidebar a{
+  display: block;
+  color: #5f5d5d;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  text-align: center;
+  }
+  
+  .sidebarC a{
+    display: block;
+    color: #0f0f0f;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    text-align: center;
+    }
+  
+  .sidebar a:hover, .sidebarC a:hover{
+  color: rgb(230, 221, 221);
+  }
+  
+  .main{
+  margin-left: 160px;
+  background-color: rgb(255, 173, 162, 0.7);
+  padding: 30px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: #e59b91 solid 5px;
+  }
 
-.sidebar a:hover{
-color: lightpink;
-}
+  .mainC{
+    margin-left: 160px;
+    background-color: rgba(209, 92, 76, 0.9);
+    padding: 30px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: #c74533 solid 5px;
+    }
 
-.main{
-margin-left: 150px;
-}
+    .dropbtnC{
+      color: rgb(58, 54, 54);
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      z-index: 1;
+      }
+    
+      
+     .dropdownC{
+      position: relative;
+      right: 0;
+      }
+    
+    
+      .dropdown-contentC{
+        display: none;
+      position: absolute;
+      background-color: rgb(39, 36, 38);
+      }
+      
+    
+      .dropdown-contentC a{
+        color: #e44d39;
+        display: block;
+        }
+      
+      .dropdow-contentC a:hover{
+      color: rgb(230, 223, 223);
+      }
+      
+      .dropdownC:hover .dropdown-contentC{
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      }
+  
+  .dropbtn{
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  z-index: 1;
+  }
 
-.dropbtn{
-background-color: hotpink;
-color: white;
-border: none;
-cursor: pointer;
-text-align: center;
-z-index: 1;
-}
+  .dropdown{
+  position: relative;
+  right: 0;
+  }
+  
+  .dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: rgb(39, 36, 38);
+  }
 
-.dropdown{
-position: relative;
-right: 0;
-}
+  .dropdown-contectC{
+    display: none;
+  position: absolute;
+  background-color: rgb(39, 36, 38);
+  }
 
-.dropdown-content{
-display: none;
-position: absolute;
-background-color: hotpink;
-}
+  .dropdownC:hover .dropbtnC{
+    background-color: rgb(148, 156, 148);
+    }
+  
+  .dropdown-content a{
+  color: #ffada2;
+  display: block;
+  }
 
-.dropdown-content a{
-color: lightgreen;
-display: block;
-}
-
-.dropdow-content a:hover{
-color: darkgreen;
-}
-
-.dropdown:hover .dropdown-content{
-display: block;
-position: absolute;
-top: 0;
-left: 100%;
-}
-
-.dropdown:hover .dropbtn{
-background-color: darkgreen;
-}
+  .dropdown-contentC a{
+    color: #e44d39;
+    display: block;
+    }
+  
+  .dropdow-content a:hover{
+  color: rgb(230, 223, 223);
+  }
+  
+  .dropdown:hover .dropdown-content{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  }
+  
+  .dropdown:hover .dropbtn{
+  background-color: darkgreen;
+  }
 
 .footer{
 position: fixed;
@@ -86,7 +171,7 @@ text-align: center;
 p {text-align: justify;
 }
 
-h1, h2, h3, h4, g5, h6{
+h1, h2, h4, h5, h6{
 background-color: grey;
 float: center;
 text-align: center;
@@ -95,8 +180,16 @@ color: white;
 font-size: 20px;
 }
 
+h3{
+  background-color: grey;
+  float: center;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  }
+
 body, input, select, label, textarea{
-color: white;
+color: rgb(29, 26, 26);
 position: relative;
 }
 
@@ -108,11 +201,20 @@ min-height:100px;
 position: relative;
 }
 
-.slika:hover { 
+.slika1 { transition: transform .15s;
+  width: 320px;
+  height: 320px;
+  min-width:100px;
+  min-height:100px;
+  position: relative;
+  }
+
+.slika:hover, .slika1:hover{ 
 z-index: 1;
 -ms-transform: scale(1.2);
 -webkit-transform: scale(1.2);
 transform: scale(1.2);
+cursor: pointer;
 }
 
 .spec{
@@ -168,12 +270,21 @@ border-collapse: collapse;
 width: 100%;
 overflow-x:auto;
 text-align: center;
+margin: auto;
 }
 
 .aboutMeBoxes{
-    border-radius: 5%;
-    border-color: wheat;
-    fill: white;
+  border-style: solid;
+  border-radius: 25px;
+  border-color: wheat;
+  margin: 50px;
+  padding: 20px;
+  width: 650px;
+  height: 80px;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+  font-style: italic;
 }
 
 .musicPic{
@@ -195,7 +306,7 @@ text-align: center;
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
   }
   
   .flip-card:hover .flip-card-inner {
@@ -210,13 +321,33 @@ text-align: center;
     backface-visibility: hidden;
   }
   
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  
   .flip-card-back {
-    background-color: #2980b9;
+    background-color: none;
     color: white;
     transform: rotateY(180deg);
+  }
+
+  .tabela{
+    vertical-align: middle; 
+    left: 50%;
+  }
+
+  .christmasy{
+    background: url("sliki/christmasy.jpg") no-repeat center center fixed;
+  }
+
+  .xmasbtn{
+    padding: 5px 15px;
+    background-color: rgb(247, 244, 244);
+    border: grey;
+    text-align: center;
+    margin: 4px 3px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.3s;
+  }
+
+  .xmasbtn:hover{
+    background-color: grey;
+    color: white;
   }

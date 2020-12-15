@@ -1,76 +1,168 @@
 <!DOCTYPE html>
 <html>
+    <head>
 
-<head>
+        <style>
+            ul {
+                list-style-type: none;
+            }
+            li {
+                margin: 10px;
+                border: white solid 1px;
+                padding: 3px;
+                font-size: large;
+                font-weight: bold;
+            }
+            p {
+                text-align: right;
+                font-style: italic;
+                font-size: small;
+            }
+            .del{
+                border: rgb(218, 65, 154) 5px solid;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
 
-<link rel = "stylesheet" type = "text/css" href = "styles.css">
-<script src = "dynamicstyle.js"></script>
+            var komentar1;
+            var likes1 = 0;
+            var likes2 = 0;
+            var likes3 = 0;
+            $(document).ready(function(){
 
-</head>
+                var lajkovi1;
+                var lajkovi2;
+                var lajkovi3;
 
-<body>
+                $("#slika1").dblclick(function(){
+                    likes1++;
+                    document.getElementById("likes1").innerHTML = likes1;
+                    localStorage.setItem("lajkovi1", likes1);
+                });
 
-<div class = "sidebar">
-<a href = "aboutme.html">About me</a>
-<div class = "dropdown">
-<a class = "dropdown-btn" href = "fave.html">Favorite things</a>
-<div class = "dropdown-content">
-<a href = "#music">Music</a>
-<a href = "#food">Food</a>
-<a href = "#movies">Movies</a>
-</div>
-</div>
+                $("#slika2").dblclick(function(){
+                    likes2++;
+                    document.getElementById("likes2").innerHTML = likes2;
+                });
 
-<a href = "gallery.html">Gallery</a>
-<a href = "blog.html">Blog</a>
-<a href = "form.html">Tell me about you!</a>
-<a href = "#contact">Contact</a>
-</div>
+                $("#slika3").dblclick(function(){
+                    likes3++;
+                    document.getElementById("likes3").innerHTML = likes3;
+                });
+            
+                var $komentari1 = $('#komentari1'); 
+                if(localStorage.getItem("#komentari1")) { 
+                    $komentari1.html(localStorage.getItem("#komentari1"));                }
 
-<div class = "main">
+                var data = new Date();
+                var datum = data.getDate() + "/"
+                        + (data.getMonth()+1)  + "/" 
+                        + data.getFullYear() + " "  
+                        + data.getHours() + ":"  
+                        + data.getMinutes() + ":" 
+                        + data.getSeconds();
 
-<h3 id = "gallery">Gallery</h3>
+                $('#postbtn1').click(function(){
+                    komentar1 = document.getElementById("com1").value;
+                    $("#komentari1").append("<li>" + komentar1 + "<p>" + datum + "</p></li>");
+                    localStorage.setItem("#komentari1", $komentari1.html());
+                });
 
-<table>
+                var $komentari2 = $('#komentari2'); 
+                if(localStorage.getItem("#komentari2")) { 
+                    $komentari2.html(localStorage.getItem("#komentari2"));
+                }
 
-<tr>
+                $('#postbtn2').click(function(){
+                    komentar2 = document.getElementById("com2").value;
+                    $("#komentari2").append("<li>" + komentar2 + "<p>" + datum + "</p></li>");
+                    localStorage.setItem("#komentari2", $komentari2.html());
+                });
 
-<td>
-<div>
-<img class = "slika" src = "sliki/gallery/eden.jpg" alt = "slika1">
-</div>
-</td>
+                var $komentari3 = $('#komentari3'); 
+                if(localStorage.getItem("#komentari3")) { 
+                    $komentari3.html(localStorage.getItem("#komentari3"));
+                }
 
-<td>
-<div>
-<img class = "slika" src = "sliki/gallery/dva.jpg" alt = "slika2">
-</div>
-</td>
+                $('#postbtn3').click(function(){
+                    komentar3 = document.getElementById("com3").value;
+                    $("#komentari3").append("<li>" + komentar3 + "<p>" + datum + "</p></li>");
+                    localStorage.setItem("#komentari3", $komentari3.html());
+                });
 
-<td>
-<div>
-<img class = "slika" src = "sliki/gallery/tri.jpg" alt = "slika3">
-</p>
-</div>
-</td>
+                $("#clear").click(function(){
+                    window.localStorage.clear();
+                });
 
-</tr>
+                $("#delete").click(function(){
+                    window.localStorage.removeItem(this);
+                });
+                
+            });
 
-<tr>
-<td>
-    <table>
+        </script>
+
+        <link rel = "stylesheet" type = "text/css" href = "styles.css">
+        <script src = "dynamicstyle.js"></script>
+        <script src="jquery.js"></script>
+
+    </head>
+
+    <body class="bodyy">
+
+        <div id="sb" class = "sidebar">
+            <a href = "aboutme.html">About me</a>
+            <div id="dd" class = "dropdown">
+                <a class = "dropdown-btn" href = "fave.html">Favorite things</a>
+                <div id="ddc" class = "dropdown-content">
+                    <a href = "music.html">Music</a>
+                    <a href = "food.html">Food</a>
+                    <a href = "movies.html">Movies</a>
+                </div>
+            </div>
+            <a href = "gallery.html">Gallery</a>
+            <a href = "blog.html">Blog</a>
+            <a href = "form.html">Tell me about you!</a>
+            <a href = "contact.html">Contact</a>
+        </div>  
+
+        <div id="main" class = "main">
+            <button class="xmasbtn" id="christmasbtn"><span>Christmas</span></button>
+            <button class="xmasbtn" id="defaultbtn" style="display: hidden;"><span>default</span></button>
+
+            <h3 id = "gallery">Gallery</h3>
+
+            <table>
+                <tr>
+                    <td>
+                        <div>
+                            <img id="slika1" class = "slika" src = "sliki/gallery/eden.jpg" alt = "slika1">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <img id="slika2" class = "slika" src = "sliki/gallery/dva.jpg" alt = "slika2">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <img id="slika3" class = "slika" src = "sliki/gallery/tri.jpg" alt = "slika3">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <table>
         <tr>
             <td>
-                <button class = "like" type="button" onClick="like1()"><img src = "sliki/gallery/instaheart.png" width = "30" height = "30"></button>
-            </td>
-            <td>
-                <p><a id="likes1">0</a></p>
-            </td>
-            <td>
-                <p>komsl</p>
-            </td>
-            <td>
-                <p>kom</p>
+                <p style="font-weight: bold; font-size: 14px;"><a id="likes1">0</a></p>
+                <button id="postbtn1">Post</button>
+                <input id = "com1" type="text" placeholder="Add a comment..."/>
+                <ul id="komentari1"></ul>
             </td>
         </tr>
     </table>
@@ -80,16 +172,10 @@
     <table>
         <tr>
             <td>
-                <button class = "like" type="button" onClick="like2()"><img src = "sliki/gallery/instaheart.png" width = "30" height = "30"></button>
-            </td>
-            <td>
-                <p><a id="likes2">0</a></p>
-            </td>
-            <td>
-                <p>komsl</p>
-            </td>
-            <td>
-                <p>kom</p>
+                <p style="font-weight: bold; font-size: 14px;"><a id="likes2">0</a></p>
+                <button id="postbtn2">Post</button>
+                <input id = "com2" type="text" placeholder="Add a comment..."/>
+                <ul id="komentari2"></ul>
             </td>
         </tr>
     </table>
@@ -99,109 +185,19 @@
     <table>
         <tr>
             <td>
-                <button class = "like" type="button" onClick="like3()"><img src = "sliki/gallery/instaheart.png" width = "30" height = "30"></button>
-            </td>
-            <td>
-                <p><a id="likes3">0</a></p>
-            </td>
-            <td>
-                <p>komsl</p>
-            </td>
-            <td>
-                <p>kom</p>
+                <p style="font-weight: bold; font-size: 14px;"><a id="likes3">0</a></p>
+                <button id="postbtn3">Post</button>
+                <input id = "com3" type="text" placeholder="Add a comment..."/>
+                <ul id="komentari3"></ul>
             </td>
         </tr>
     </table>
 </td>
 
-</tr>
-
-<tr>
-
-<td>
-<div>
-<img class = "slika" src = "sliki/gallery/cetiri.jpg" alt = "slika4">
-</div>
-</td>
-
-<td>
-<div>
-<img class = "slika" src = "sliki/gallery/pet.jpg" alt = "slika5">
-</div>
-</td>
-
-<td>
-<div>
-<img class = "slika" src = "sliki/gallery/sest.jpg" alt = "slika6">
-</div>
-</td>
-
-</tr>
-
-<tr>
-    <td>
-
-        <table>
-            <tr>
-                <td>
-                    <button class = "like" type="button" onClick="like4()"><img src = "sliki/gallery/instaheart.png" width = "30" height = "30"></button>
-                </td>
-                <td>
-                    <p><a id="likes4">0</a></p>
-                </td>
-                <td>
-                    <p>komsl</p>
-                </td>
-                <td>
-                    <p>kom</p>
-                </td>
-            </tr>
-        </table>
-        
-    </td>
-
-    <td>
-
-        <table>
-            <tr>
-                <td>
-                    <button class = "like" type="button" onClick="like5()"><img src = "sliki/gallery/instaheart.png" width = "30" height = "30"></button>
-                </td>
-                <td>
-                    <p><a id="likes5">0</a></p>
-                </td>
-                <td>
-                    <p>komsl</p>
-                </td>
-                <td>
-                    <p>kom</p>
-                </td>
-            </tr>
-        </table>
-        
-    </td>
-
-    <td>
-        <table>
-            <tr>
-                <td>
-                    <button class = "like" type="button" onClick="like6()"><img src = "sliki/gallery/instaheart.png" width = "30" height = "30"></button>
-                </td>
-                <td>
-                    <p><a id="likes6">0</a></p>
-                </td>
-                <td>
-                    <p>komsl</p>
-                </td>
-                <td>
-                    <p>kom</p>
-                </td>
-            </tr>
-        </table>
-    </td>
 </tr>
 
 </table>
+<button id="clear">Clear</button>
 
 </div>
 

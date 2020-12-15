@@ -1,59 +1,108 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Tamara Andonovska</title>
 
-<head>
-<meta charset = "utf-8">
-<title>Tamara Andonovska</title>
+        <style>
 
-<link rel = "stylesheet" type = "text/css" href = "styles.css">
-<script src = "dynamics.js"></script>
+            .bloginput{
+                height: 500px;
+                width: 1200px;
+                margin: 20px;
+            }
 
-</head>
-<body>
-<div class = "sidebar">
-<a href = "aboutme.html">About me</a>
-<div class = "dropdown">
-<a class = "dropdown-btn" href = "fave.html">Favorite things</a>
-<div class = "dropdown-content">
-<a href = "#music">Music</a>
-<a href = "#food">Food</a>
-<a href = "#movies">Movies</a>
-</div>
-</div>
+            section{
+                margin: 20px;
+            }
 
-<a href = "gallery.html">Gallery</a>
-<a href = "blog.html">Blog</a>
-<a href = "form.html">Tell me about you!</a>
-<a href = "#contact">Contact</a>
-</div>
-<div class = "main">
+        </style>
 
-<h3 id = "blog">Blog</h3>
+        <link rel = "stylesheet" type = "text/css" href = "styles.css">
 
-<section>
-<details>
-<summary>A short article</summary>
-<p>This text has been entirely copied from <a class = "vrska" href = "https://en.wikipedia.org/wiki/Blog"> Wikipedia.</a></p>
-<article>
-<p><time>10:00</time></p>
-<p>A blog (a truncation of "weblog") 
-is a discussion or informational website published on the 
-World Wide Web consisting of discrete, often informal diary-style 
-text entries (posts). Posts are typically displayed in reverse chronological order, 
-so that the most recent post appears first, at the top of the web page. Until 2009, 
-blogs were usually the work of a single individual, occasionally of a small group, 
-and often covered a single subject or topic. In the 2010s, "multi-author blogs" (MABs) 
-emerged, featuring the writing of multiple authors and sometimes professionally edited. 
-MABs from newspapers, other media outlets, universities, think tanks, advocacy groups, 
-and similar institutions account for an increasing quantity of blog traffic. 
-The rise of Twitter and other "microblogging" systems helps integrate MABs and 
-single-author blogs into the news media. Blog can also be used as a verb, 
-meaning to maintain or add content to a blog.
-</p>
-</article>
-</section>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="jquery.js>"></script>
+        <script>
+            $(document).ready(function(){
+                
+                var data = new Date();
+                var datum = data.getDate() + "/"
+                    + (data.getMonth()+1)  + "/" 
+                    + data.getFullYear() + " "  
+                    + data.getHours() + ":"  
+                    + data.getMinutes() + ":" 
+                    + data.getSeconds();
 
-</div>
+                var $titles = $('#title'); 
+                if(localStorage.getItem("#title")) { 
+                    $titles.html(localStorage.getItem("#title"));
+                }
 
-</body>
+                $('#publishbtn').click(function(){
+                    var title1 = document.getElementById("title").value;
+                    var blog1 = document.getElementById("blog").value;
+                    $("#novo").append("<section><details><summary>" + title1 + "</summary><article><p>" + datum + "</p><p>" + blog1 + "</p></article></details></section>");
+                    localStorage.setItem("#novo", $titles.html());
+                });
+            });
+        </script>
+        <script src = "dynamics.js"></script>
+
+    </head>
+
+    <body class="bodyy">
+
+        <div id="sb" class = "sidebar">
+            <a href = "aboutme.html">About me</a>
+            <div id="dd" class = "dropdown">
+                <a class = "dropdown-btn" href = "fave.html">Favorite things</a>
+                <div id="ddc" class = "dropdown-content">
+                    <a href = "music.html">Music</a>
+                    <a href = "food.html">Food</a>
+                    <a href = "movies.html">Movies</a>
+                </div>
+            </div>
+            <a href = "gallery.html">Gallery</a>
+            <a href = "blog.html">Blog</a>
+            <a href = "form.html">Tell me about you!</a>
+            <a href = "contact.html">Contact</a>
+        </div>
+        
+        <div id="main" class = "main">
+            <button class="xmasbtn" id="christmasbtn"><span>Christmas</span></button>
+            <button class="xmasbtn" id="defaultbtn" style="display: hidden;"><span>default</span></button>
+            <h3 id = "blog">Blog</h3>
+
+            <section>
+                <details>
+                    <summary>A short article</summary>
+                    <p>This text has been entirely copied from <a class = "vrska" href = "https://en.wikipedia.org/wiki/Blog"> Wikipedia.</a></p>
+                    <article>
+                        <p><time>10:00</time></p>
+                        <p>A blog (a truncation of "weblog") 
+                        is a discussion or informational website published on the 
+                        World Wide Web consisting of discrete, often informal diary-style 
+                        text entries (posts). Posts are typically displayed in reverse chronological order, 
+                        so that the most recent post appears first, at the top of the web page. Until 2009, 
+                        blogs were usually the work of a single individual, occasionally of a small group, 
+                        and often covered a single subject or topic. In the 2010s, "multi-author blogs" (MABs) 
+                        emerged, featuring the writing of multiple authors and sometimes professionally edited. 
+                        MABs from newspapers, other media outlets, universities, think tanks, advocacy groups, 
+                        and similar institutions account for an increasing quantity of blog traffic. 
+                        The rise of Twitter and other "microblogging" systems helps integrate MABs and 
+                        single-author blogs into the news media. Blog can also be used as a verb, 
+                        meaning to maintain or add content to a blog.
+                        </p>
+                    </article>
+                </details>
+            </section>
+
+            <div id="novo"></div>
+
+            <input id="title" type="text" placeholder="Title">
+            <input id="blog" type="text" class="bloginput" placeholder="Write here"/>
+            <button id="publishbtn">Publish</button>
+
+        </div>
+    </body>
 </html>

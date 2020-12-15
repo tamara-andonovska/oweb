@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+
+.main1{
+  margin-left: 160px;
+  background-color: none;
+  padding: 30px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  }
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+            
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel = "stylesheet" type = "text/css" href = "styles.css">
+        <script src = "dynamicstyle.js"></script>
+        <script src="jquery.js"></script>
+
+    </head>
+
+    <body class="bodyy">
+
+        <div id="sb" class = "sidebar">
+            <a href = "aboutme.html">About me</a>
+            <div id="dd" class = "dropdown">
+                <a class = "dropdown-btn" href = "fave.html">Favorite things</a>
+                <div id="ddc" class = "dropdown-content">
+                    <a href = "music.html">Music</a>
+                    <a href = "food.html">Food</a>
+                    <a href = "movies.html">Movies</a>
+                </div>
+            </div>
+            <a href = "gallery.html">Gallery</a>
+            <a href = "blog.html">Blog</a>
+            <a href = "form.html">Tell me about you!</a>
+            <a href = "contact.html">Contact</a>
+        </div>  
+
+        <div class = "main1">
+          <button class="xmasbtn" id="christmasbtn"><span>Christmas</span></button>
+          <button class="xmasbtn" id="defaultbtn" style="display: hidden;"><span>default</span></button>
+<h1>Movies</h1>
+            <table>
+                <tr>
+                    <td>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="sliki/movies/inceptionF.jpg" alt="inception" style="width:300px;height:400px;">
+                              </div>
+                              <div class="flip-card-back">
+                                <a href="https://www.imdb.com/title/tt1375666/"><img src="sliki/movies/inception.jpg" alt="inception" style="width:300px;height:400px;"></a>
+                              </div>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="sliki/movies/interstellarF.jpg" alt="interstellar" style="width:300px;height:400px;">
+                              </div>
+                              <div class="flip-card-back">
+                                <a href="https://www.imdb.com/title/tt0816692/"><img src="sliki/movies/interstellar.jpg" alt="interstellar" style="width:300px;height:400px;"></a>
+                              </div>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="sliki/movies/10thingsF.png" alt="10things" style="width:300px;height:400px;">
+                          </div>
+                          <div class="flip-card-back">
+                            <a href="https://www.imdb.com/title/tt0147800/"><img src="sliki/movies/10things.jpg" alt="10things" style="width:300px;height:400px;"></a>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="sliki/movies/silverliningsF.jpg" alt="silverlinings" style="width:300px;height:400px;">
+                          </div>
+                          <div class="flip-card-back">
+                            <a href="https://www.imdb.com/title/tt1045658/"><img src="sliki/movies/silverlinings.jpg" alt="silverlinings" style="width:300px;height:400px;"></a>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

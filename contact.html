@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href = "styles.css">
+        <script src = "dynamicstyle.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="jquery.js"></script>
+        <style>
+            .centar{
+                position: absolute;
+                left: 50%;
+                right: 50%;
+            }
+            img {
+                border-radius: 15%;
+            }
+            .main1{
+                margin-left: 160px;
+                background-color: none;
+                padding: 30px;
+                margin-right: 20px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                border: none;
+            }
+        </style>
+    </head>
+
+    <body class="bodyy">
+
+        <div id="sb" class = "sidebar">
+            <a href = "aboutme.html">About me</a>
+            <div id="dd" class = "dropdown">
+                <a class = "dropdown-btn" href = "fave.html">Favorite things</a>
+                <div id="ddc" class = "dropdown-content">
+                    <a href = "music.html">Music</a>
+                    <a href = "food.html">Food</a>
+                    <a href = "movies.html">Movies</a>
+                </div>
+            </div>
+            <a href = "gallery.html">Gallery</a>
+            <a href = "blog.html">Blog</a>
+            <a href = "form.html">Tell me about you!</a>
+            <a href = "contact.html">Contact</a>
+        </div>  
+
+        <div class = "main1">
+            <button class="xmasbtn" id="christmasbtn"><span>Christmas</span></button>
+            <button class="xmasbtn" id="defaultbtn" style="display: hidden;"><span>default</span></button>
+
+            <div class="centar">
+                <a href = "mailto:t.andonovska8@gmail.com"><img src="sliki/contact/mail.jpg" alt="mail" style="height: 135px; width: 140px;"></a>
+                <a href = "tel: +389 70 123 123"><img src="sliki/contact/phone.jpg" alt="phone" style="height: 135px; width: 140px;"></a>
+                <a href="https://www.linkedin.com/in/tamaraandonovska/"><img src="sliki/contact/linkedin.png" alt="linkedin" style="height: 140px; width: 140px;"></a>
+            </div>
+
+        </div>
+
+    </body>
+</html>

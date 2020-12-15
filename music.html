@@ -1,29 +1,169 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset = "utf-8">
-    <title>Tamara Andonovska</title>
-    
-    <link rel = "stylesheet" type = "text/css" href = "styles.css">
-    <script src = "dynamics.js"></script>
-</head>
-<body>
+    <head>
+        <style>
 
-    <div>
-        <div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img src = sliki/music/goodvibes.jpg>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Good Vibes</h3>
-                    </div>
+            .main1{
+            margin-left: 160px;
+            background-color: none;
+            padding: 30px;
+            margin-right: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: none;
+            }
+
+            .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+            }
+
+            .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            }
+
+            .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+            }
+
+            .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            }
+
+            .flip-card-front {
+            background-color: #bbb;
+            color: black;
+            }
+
+            .flip-card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+            }
+
+            .container{
+              position: relative;
+              text-align: center;
+              color: white;
+              background-color: rgb(139, 133, 133);
+            }
+
+            .tekstVrzSlika{
+                position: absolute;
+                top: 50%;
+                bottom: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: large;
+                font-style: bold italic;
+                background-color: rgb(139, 133, 133);
+            }
+
+            .vrzSlika{
+                text-decoration: none;
+                color: white;
+                font-style: italic;
+                font-weight: bold;
+                background-color: rgb(139, 133, 133);
+            }
+            
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel = "stylesheet" type = "text/css" href = "styles.css">
+        <script src = "dynamicstyle.js"></script>
+        <script src="jquery.js"></script>
+
+    </head>
+
+    <body class="bodyy">
+
+        <div id="sb" class = "sidebar">
+            <a href = "aboutme.html">About me</a>
+            <div id="dd" class = "dropdown">
+                <a class = "dropdown-btn" href = "fave.html">Favorite things</a>
+                <div id="ddc" class = "dropdown-content">
+                    <a href = "music.html">Music</a>
+                    <a href = "food.html">Food</a>
+                    <a href = "movies.html">Movies</a>
                 </div>
-
             </div>
-        </div>
-    </div>
+            <a href = "gallery.html">Gallery</a>
+            <a href = "blog.html">Blog</a>
+            <a href = "form.html">Tell me about you!</a>
+            <a href = "contact.html">Contact</a>
+        </div>  
 
-</body>
+        <div class = "main1">
+          <button class="xmasbtn" id="christmasbtn"><span>Christmas</span></button>
+          <button class="xmasbtn" id="defaultbtn" style="display: hidden;"><span>default</span></button>
+          <h1>Movies</h1>
+            <table>
+                <tr>
+                    <td>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="sliki/music/chill.jpg" alt="chill" style="width:300px;height:400px;">
+                              </div>
+                              <div class="flip-card-back" class="container">
+                                <a class="vrzSlika" href="https://open.spotify.com/playlist/37i9dQZF1DWViBxWcYEI1b?si=BYi2C_d2SPK2_MlPAku6Fw"><img src="sliki/music/chill.jpg" alt="chill" style="width:300px;height:400px;filter:blur(2px);"><div class="tekstVrzSlika">Contemporary Blend</div></a>
+                              </div>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <img src="sliki/music/christmas.jpg" alt="christmas" style="width:300px;height:400px;">
+                              </div>
+                              <div class="flip-card-back" class="container">
+                                <a class="vrzSlika" href="https://open.spotify.com/playlist/37i9dQZF1DX0A8zVl7p82B?si=yzQLf89vQrumbhyLp2XeNA"><img src="sliki/music/christmas.jpg" alt="christmas" style="width:300px;height:400px;filter:blur(2px);"><div class="tekstVrzSlika">Christmas Pop</div></a>
+                              </div>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td>
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="sliki/music/zhur.jpg" alt="zhur" style="width:300px;height:400px;">
+                          </div>
+                          <div class="flip-card-back" class="container">
+                            <a class="vrzSlika" href="https://open.spotify.com/playlist/6vDGVr652ztNWKZuHvsFvx?si=eyyvbSqNT42xcUWUQzUh3Q"><img src="sliki/music/zhur.jpg" alt="zhur" style="width:300px;height:400px;filter:blur(2px);"><div class="tekstVrzSlika">Deep House 2021</div></a>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="flip-card">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img src="sliki/music/study.jpg" alt="study" style="width:300px;height:400px;">
+                          </div>
+                          <div class="flip-card-back" class="container">
+                            <a class="vrzSlika" href="https://open.spotify.com/playlist/3LFIBdP7eZXJKqf3guepZ1?si=SPZIhppfQNOn0q3Vv8Nj2Q"><img src="sliki/music/study.jpg" alt="study" style="width:300px;height:400px;filter:blur(2px);"><div class="tekstVrzSlika">Lofi Fruits Music</div></a>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
 </html>

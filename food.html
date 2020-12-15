@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel = "stylesheet" type = "text/css" href = "styles.css">
+<script src = "dynamics.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="jquery.js"></script>
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 350px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: white;
+  font-weight: bold;
+  background-color: grey;
+  font-size: 24px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(114, 113, 113);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #383838;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.slidesliki{
+    height: 400px;
+    width: 350px;
+}
+
+</style>
+</head>
+<body>
+
+    <body class="bodyy">
+        <div id="sb" class = "sidebar">
+            <a href = "aboutme.html">About me</a>
+            <div id="dd" class = "dropdown">
+            <a class = "dropdown-btn" href = "fave.html">Favorite things</a>
+            <div id="ddc" class = "dropdown-content">
+            <a href = "music.html">Music</a>
+            <a href = "food.html">Food</a>
+            <a href = "movies.html">Movies</a>
+            </div>
+            </div>
+    
+    <a href = "gallery.html">Gallery</a>
+    <a href = "blog.html">Blog</a>
+    <a href = "form.html">Tell me about you!</a>
+    <a href = "contact.html">Contact</a>
+    </div>
+
+    <div id="main" class = "main">
+      <button class="xmasbtn" id="christmasbtn"><span>Christmas</span></button>
+      <button class="xmasbtn" id="defaultbtn" style="display: hidden;"><span>default</span></button>
+
+        <h3 id = "food">Food</h3>
+        
+
+
+
+<section>
+    <details>
+<summary>Ingredients</summary>
+<article>
+    <ul>
+        <li>Molasses + spices for flavor</li>
+        <li>Egg so the gingerbread cookies have structure and richness</li>
+        <li>Brown sugar instead of white granulated sugar. I always use brown sugar when its flavor fits</li>
+    </ul>
+</article>
+</details>
+</section>
+
+<h1 id="naslov">Recipe</h1>
+    <p>
+        Let’s walk through the gingerbread cookie recipe so you feel confident when you begin baking. 
+    </p>
+    <p>
+        Chill the dough: The dough is sticky once it’s all beaten together in your mixing bowl and therefore, it absolutely MUST be chilled for at least 3 hours. Give yourself enough time in the kitchen or make the cookie dough and chill it overnight. You want your cookie dough firm so the cookies hold their shape and you want your cookie dough manageable so you can work with it. You won’t have either unless you have chilled cookie dough!
+    </p>
+    <p>
+        Wrap up the dough: It’s easiest to wrap the dough in plastic wrap before chilling. Scoop out 1/2 of the prepared cookie dough, plop it onto a long sheet of plastic wrap, wrap it up, and flatten it out into a disc. Repeat with the other 1/2 of dough. Then chill. See that photo above? That’s what you’re doing, but you’ll have 2 discs. Why are you doing this? It’s easier to roll out the chilled cookie dough when it is in a disc shape. Also, the cookie dough chills faster when there is less volume. And it’s just easier to work with smaller portions when rolling/shaping!
+    </p>
+    <p>
+        Roll it out: After chilling, roll out the chilled cookie dough discs until about 1/4-inch thick. Don’t be afraid to flour your hands, rolling pin, work surface, and everything in the world. By that, I mean: the cookie dough can become sticky as you work. So, don’t be scared to add more flour to the work surface. The flour spots on top of your shaped cookie dough will bake off.
+    </p>
+    <p>
+        Place the cut-out cookies onto a lined baking sheet about 1 inch apart. The cookies won’t really spread, but you want to make sure they have enough room to breathe. They are gingerbread people, after all.
+    </p>
+    <h1 id="naslov">Decoration</h1>
+    <p>
+        After they’ve baked and cooled, it’s time to decorate the cookies. We’re talking smiles, eyes, bow-ties, buttons, squiggles, whatever your gingerbread cookie loving heart desires. This is when it’s really fun to have a friend or little baker in the kitchen with you. You can use the easy glaze icing recipe I posted with my Christmas sugar cookies or my traditional royal icing recipe, whichever you prefer.
+    </p>
+    <p>
+        Tint the icing with a couple drops of food coloring to spice things up, too.
+    </p>
+
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img class="slidesliki" src="sliki/1.jpg">
+  <div class="text">Step One</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img class="slidesliki" src="sliki/2.jpg">
+  <div class="text">Step Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img class="slidesliki" src="sliki/3.jpg">
+  <div class="text">Step Three</div>
+</div>
+
+<div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img class="slidesliki" src="sliki/4.jpg">
+    <div class="text">Step Four</div>
+  </div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</div>
+
+</body>
+</html> 
