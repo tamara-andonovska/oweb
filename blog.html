@@ -33,11 +33,6 @@
                     + data.getMinutes() + ":" 
                     + data.getSeconds();
 
-                var $entries= $('#title'); 
-                if(localStorage.getItem("#title")) { 
-                    $entries.html(localStorage.getItem("#title"));
-                }
-
                 $('#publishbtn').click(function(){
                     var title1 = document.getElementById("title").value;
                     var blog1 = document.getElementById("blogB").value;
