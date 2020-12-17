@@ -35,7 +35,7 @@ function like6() {
     document.getElementById("likes6").innerHTML = likes6;
 };
 
-function forma(){
+function thankYou(){
     window.alert("Thank you for completing the form!");
 };
 

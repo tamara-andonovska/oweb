@@ -12,7 +12,7 @@
                 margin: 20px;
             }
 
-            section{
+            section, textarea{
                 margin: 20px;
             }
 
@@ -24,7 +24,7 @@
         <script src="jquery.js>"></script>
         <script>
             $(document).ready(function(){
-                
+
                 var data = new Date();
                 var datum = data.getDate() + "/"
                     + (data.getMonth()+1)  + "/" 
@@ -33,16 +33,19 @@
                     + data.getMinutes() + ":" 
                     + data.getSeconds();
 
-                var $titles = $('#title'); 
+                var $entries= $('#title'); 
                 if(localStorage.getItem("#title")) { 
-                    $titles.html(localStorage.getItem("#title"));
+                    $entries.html(localStorage.getItem("#title"));
                 }
 
                 $('#publishbtn').click(function(){
                     var title1 = document.getElementById("title").value;
-                    var blog1 = document.getElementById("blog").value;
-                    $("#novo").append("<section><details><summary>" + title1 + "</summary><article><p>" + datum + "</p><p>" + blog1 + "</p></article></details></section>");
-                    localStorage.setItem("#novo", $titles.html());
+                    var blog1 = document.getElementById("blogB").value;
+                    var ime1 = document.getElementById("ime").value;
+                    $("#novo").append("<section><details><summary>" + title1 + "</summary><article><p>" + datum + "</p><p>" + blog1 + "</p><p style='font-size: 20px; font-style:italic'>" + ime1 + "</p></article></details></section>");
+                    document.getElementById("title").value = "";
+                    document.getElementById("blogB").value = "";
+                    document.getElementById("ime").value = "";
                 });
             });
         </script>
@@ -100,7 +103,8 @@
             <div id="novo"></div>
 
             <input id="title" type="text" placeholder="Title">
-            <input id="blog" type="text" class="bloginput" placeholder="Write here"/>
+            <input id="ime" type="tekst" placeholder="Authors name">
+            <textarea id="blogB" rows="15" cols="150" placeholder="Write here..."></textarea>
             <button id="publishbtn">Publish</button>
 
         </div>

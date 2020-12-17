@@ -31,29 +31,26 @@
             var likes3 = 0;
             $(document).ready(function(){
 
-                var lajkovi1;
-                var lajkovi2;
-                var lajkovi3;
-
                 $("#slika1").dblclick(function(){
                     likes1++;
-                    document.getElementById("likes1").innerHTML = likes1;
-                    localStorage.setItem("lajkovi1", likes1);
+                    document.getElementById("l1").innerHTML = likes1;
+                    localStorage.setItem("likes1", lajkovi1.html);
                 });
 
                 $("#slika2").dblclick(function(){
                     likes2++;
-                    document.getElementById("likes2").innerHTML = likes2;
+                    document.getElementById("l2").innerHTML = likes2;
                 });
 
                 $("#slika3").dblclick(function(){
                     likes3++;
-                    document.getElementById("likes3").innerHTML = likes3;
+                    document.getElementById("l3").innerHTML = likes3;
                 });
             
                 var $komentari1 = $('#komentari1'); 
                 if(localStorage.getItem("#komentari1")) { 
-                    $komentari1.html(localStorage.getItem("#komentari1"));                }
+                    $komentari1.html(localStorage.getItem("#komentari1"));                
+                }
 
                 var data = new Date();
                 var datum = data.getDate() + "/"
@@ -67,6 +64,7 @@
                     komentar1 = document.getElementById("com1").value;
                     $("#komentari1").append("<li>" + komentar1 + "<p>" + datum + "</p></li>");
                     localStorage.setItem("#komentari1", $komentari1.html());
+                    document.getElementById("com1").value = "";
                 });
 
                 var $komentari2 = $('#komentari2'); 
@@ -78,6 +76,7 @@
                     komentar2 = document.getElementById("com2").value;
                     $("#komentari2").append("<li>" + komentar2 + "<p>" + datum + "</p></li>");
                     localStorage.setItem("#komentari2", $komentari2.html());
+                    document.getElementById("com2").value = "";
                 });
 
                 var $komentari3 = $('#komentari3'); 
@@ -89,16 +88,12 @@
                     komentar3 = document.getElementById("com3").value;
                     $("#komentari3").append("<li>" + komentar3 + "<p>" + datum + "</p></li>");
                     localStorage.setItem("#komentari3", $komentari3.html());
+                    document.getElementById("com3").value = "";
                 });
 
                 $("#clear").click(function(){
                     window.localStorage.clear();
                 });
-
-                $("#delete").click(function(){
-                    window.localStorage.removeItem(this);
-                });
-                
             });
 
         </script>
@@ -159,7 +154,7 @@
                         <table>
         <tr>
             <td>
-                <p style="font-weight: bold; font-size: 14px;"><a id="likes1">0</a></p>
+                <p style="font-weight: bold; font-size: 14px;"><a id="l1">0</a></p>
                 <button id="postbtn1">Post</button>
                 <input id = "com1" type="text" placeholder="Add a comment..."/>
                 <ul id="komentari1"></ul>
@@ -172,7 +167,7 @@
     <table>
         <tr>
             <td>
-                <p style="font-weight: bold; font-size: 14px;"><a id="likes2">0</a></p>
+                <p style="font-weight: bold; font-size: 14px;"><a id="l2">0</a></p>
                 <button id="postbtn2">Post</button>
                 <input id = "com2" type="text" placeholder="Add a comment..."/>
                 <ul id="komentari2"></ul>
@@ -185,7 +180,7 @@
     <table>
         <tr>
             <td>
-                <p style="font-weight: bold; font-size: 14px;"><a id="likes3">0</a></p>
+                <p style="font-weight: bold; font-size: 14px;"><a id="l3">0</a></p>
                 <button id="postbtn3">Post</button>
                 <input id = "com3" type="text" placeholder="Add a comment..."/>
                 <ul id="komentari3"></ul>
